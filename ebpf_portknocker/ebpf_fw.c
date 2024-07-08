@@ -51,7 +51,7 @@ echo -n -e '\xde\xad\xbe\xef' | nc -u -w1 dst_host KNOCK_PORT
 #endif
 
 struct {
-    __uint(type, BPF_MAP_TYPE_PERCPU_HASH);
+    __uint(type, BPF_MAP_TYPE_HASH);
     __uint(max_entries, 100000);
     __type(key, uint32_t);
     __type(value, uint64_t);
